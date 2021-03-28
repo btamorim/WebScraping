@@ -1,0 +1,6 @@
+requests
+pandas
+BeautifulSoup
+webdriver
+json
+time
