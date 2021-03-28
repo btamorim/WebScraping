@@ -20,3 +20,6 @@ Após clonar o projeto, instalar os requisitos (requirements.txt):
  <ul>
     <li> <b>executando: python3 cartola.py</b></li>
  </ul>
+
+# Veja como é coletado
+Veja o arquivo webScrapCartolaFC.gif
