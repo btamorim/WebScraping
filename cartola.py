@@ -7,7 +7,7 @@ from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.support.ui import Select
 import json
 import time as tempo
-# Grab content from URL (Pegar conteúdo HTML a partir da URL)
+#(Pegar conteúdo HTML a partir da URL)
 url = "https://www.cartolafcbrasil.com.br/scouts/cartola-fc-2020/rodada-1"
 times = {'Athlético-PR',
          'Atlético-MG',
@@ -47,7 +47,7 @@ def pontuacaoAtletas(timess, clube):
     soup = BeautifulSoup(html_content, 'html.parser')
     table = soup.find(name='table')
 
-    # Data Structure Conversion (Estruturar conteúdo em um Data Frame) - Pandas
+    #  (Estruturar conteúdo em um Data Frame) - Pandas
     df_full = pd.read_html(str(table))[0]
 
     # FIltrar por coluna
@@ -59,9 +59,8 @@ def pontuacaoAtletas(timess, clube):
     clubes = df.to_dict('records')
     for dado in clubes:
         dado['clube'] = clube
-    #dados = {}
-    #dados = df.to_dict('records')
-    # Convert to Dict (Transformar os Dados em um Dicionário de dados próprio)
+
+    # (Transformar os Dados em um Dicionário de dados próprio)
     return clubes
 
 
